@@ -1,0 +1,81 @@
+DECIMAL TO BINARY CONVERSION
+#include<stdio.h>
+#include<stdlib.h>
+int main()
+{  
+int a[10],n,i;    
+printf("Enter the number to convert: ");    
+scanf("%d",&n);    
+for(i=0;n>0;i++)    
+{    
+a[i]=n%2;    
+n=n/2;    
+}    
+printf("\nBinary of Given Number is=");    
+for(i=i-1;i>=0;i--)    
+{    
+printf("%d",a[i]);    
+}    
+return 0;  
+}
+
+
+
+
+hexa to decimal
+#include<stdio.h>
+int main()
+{
+	int n;
+	printf("enter the hex decimal number");
+	scanf("%x",&n);
+	printf("the decimal value is:%d",n);
+	return 0;
+}
+
+
+
+decimal to octal
+
+#include <stdio.h>
+int main()
+{
+long decimal, remainder, quotient,octal=0;
+intoctalnum[100], i = 1, j;
+printf("Enter the decimal number: ");
+scanf("%ld", &decimal);
+    quotient = decimal;
+while (quotient != 0)
+    {
+octalnum[i++] = quotient % 8;
+        quotient = quotient / 8;
+    }
+    for (j = i - 1; j > 0; j--)
+        octal= octal*10 + octalnum[j];
+printf("Equivalent octal value of decimal no %d is: %d  ", decimal,octalnum);
+    return 0;
+}
+
+
+binary to decimal
+
+#include <stdio.h>
+void main()  
+{  
+intnum, binary_num, decimal_num = 0, base = 1, rem;  
+printf (" Enter a binary number with the combination of 0s and 1s \n");  
+scanf (" %d", &num); 
+binary_num = num; 
+while ( num > 0)  
+    {  
+        rem = num % 10; 
+decimal_num = decimal_num + rem * base;  
+        num = num / 10;  
+        base = base * 2;  
+    }  
+
+printf ( " The binary number is %d \t", binary_num); 
+printf (" \n The decimal number is %d \t", decimal_num);    
+}
+
+
